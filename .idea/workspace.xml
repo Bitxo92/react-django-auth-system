@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e1c78eb-b178-45aa-b3d9-9230a8961a80" name="Changes" comment="feat(): added corsheader and drf dependencies and setup config for it">
-      <change beforePath="$PROJECT_DIR$/Frontend/src/components/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/components/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
