@@ -67,3 +67,8 @@ def verify_token(request):
             'email': request.user.email,
         }
     }, status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def health_check(request):
+    return Response({"status": "ok"}, status=200)

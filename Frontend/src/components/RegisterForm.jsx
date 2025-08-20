@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import CircularProgress from "./CircularProgress";
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -31,6 +32,19 @@ const RegisterForm = () => {
     setLoading(true);
 
     try {
+      const res = await axios.get("/api/auth/health");
+      if (res.status !== 200) {
+        setError("Unable to connect to the server. Please try again later.");
+        return;
+      }
+    } catch (err) {
+      setError("Unable to connect to the server. Please try again later.");
+      setLoading(false);
+      return;
+    } finally {
+      setLoading(false);
+    }
+    try {
       const config = {
         headers: {
           "Content-Type": "application/json",
@@ -56,8 +70,6 @@ const RegisterForm = () => {
         Object.keys(errors).forEach((key) => {
           setError(errors[key][0]);
         });
-      } else if (!err.response) {
-        setError("Unable to connect to the server. Please try again later.");
       } else {
         setError("Registration failed");
       }
@@ -67,7 +79,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-md space-y-6">
+    <div className="relative max-w-md w-full bg-white p-8 rounded-lg shadow-md space-y-6">
       {loading && (
         <div className="absolute inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center rounded-lg z-50">
           <CircularProgress />

@@ -37,6 +37,8 @@ const LoginForm = () => {
     } catch (err) {
       if (!err.response) {
         setError("Unable to connect to the server. Please try again later.");
+      } else if (err.response.status >= 500) {
+        setError("Server error. Please try again later.");
       } else {
         setError(err.response?.data?.detail || "Login failed");
       }
