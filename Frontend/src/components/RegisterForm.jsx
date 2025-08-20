@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import CircularProgress from "./CircularProgress";
+import { UserPen, Mail, User, Lock, UserRoundPlus } from "lucide-react";
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -102,7 +103,10 @@ const RegisterForm = () => {
               htmlFor="username"
               className="block text-sm font-medium text-gray-700"
             >
-              Username
+              <div className="flex items-center ml-2">
+                <User className="h-5 w-5 md:h-6 md:w-6 mr-1" />
+                <span>Username</span>
+              </div>
             </label>
             <input
               id="username"
@@ -122,7 +126,10 @@ const RegisterForm = () => {
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
             >
-              Email
+              <div className="flex items-center ml-2">
+                <Mail className="h-5 w-5 md:h-6 md:w-6 mr-1" />
+                <span>Email</span>
+              </div>
             </label>
             <input
               id="email"
@@ -143,7 +150,10 @@ const RegisterForm = () => {
                 htmlFor="first_name"
                 className="block text-sm font-medium text-gray-700"
               >
-                First Name
+                <div className="flex items-center ml-2">
+                  <UserPen className="h-5 w-5 md:h-6 md:w-6 mr-1" />
+                  <span>First Name</span>
+                </div>
               </label>
               <input
                 id="first_name"
@@ -161,7 +171,10 @@ const RegisterForm = () => {
                 htmlFor="last_name"
                 className="block text-sm font-medium text-gray-700"
               >
-                Last Name
+                <div className="flex items-center ml-2">
+                  <UserPen className="h-5 w-5 md:h-6 md:w-6 mr-1" />
+                  <span>Last Name</span>
+                </div>
               </label>
               <input
                 id="last_name"
@@ -181,7 +194,10 @@ const RegisterForm = () => {
               htmlFor="password"
               className="block text-sm font-medium text-gray-700"
             >
-              Password
+              <div className="flex items-center ml-2">
+                <Lock className="h-5 w-5 md:h-6 md:w-6 mr-1" />
+                <span>Password</span>
+              </div>
             </label>
             <input
               id="password"
@@ -201,7 +217,10 @@ const RegisterForm = () => {
               htmlFor="password_confirm"
               className="block text-sm font-medium text-gray-700"
             >
-              Confirm Password
+              <div className="flex items-center ml-2">
+                <Lock className="h-5 w-5 md:h-6 md:w-6 mr-1" />
+                <span>Confirm Password</span>
+              </div>
             </label>
             <input
               id="password_confirm"
@@ -225,6 +244,8 @@ const RegisterForm = () => {
                      bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
                      disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
           >
+            {" "}
+            <UserRoundPlus className="h-5 w-5 md:h-6 md:w-6 mr-1" />
             {loading ? "Creating account..." : "Create account"}
           </button>
         </div>
