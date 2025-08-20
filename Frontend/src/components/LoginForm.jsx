@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import CircularProgress from "./CircularProgress";
+import { User, Lock, LogIn } from "lucide-react";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -71,7 +72,10 @@ const LoginForm = () => {
               htmlFor="user"
               className="block text-sm font-medium text-gray-700"
             >
-              username
+              <div className="flex items-center ml-2">
+                <User className="h-5 w-5 md:h-6 md:w-6 mr-1" />
+                <span>Username</span>
+              </div>
             </label>
             <input
               id="username"
@@ -91,7 +95,10 @@ const LoginForm = () => {
               htmlFor="password"
               className="block text-sm font-medium text-gray-700"
             >
-              Password
+              <div className="flex items-center ml-2">
+                <Lock className="h-5 w-5 md:h-6 md:w-6 mr-1" />
+                <span>Password</span>
+              </div>
             </label>
             <input
               id="password"
@@ -115,6 +122,8 @@ const LoginForm = () => {
                        bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
                        disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
           >
+            {" "}
+            <LogIn className="h-5 w-5 md:h-6 md:w-6 mr-2" />
             {loading ? "Signing in..." : "Sign in"}
           </button>
         </div>
