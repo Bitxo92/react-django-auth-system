@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import CircularProgress from "./CircularProgress";
-import { User, Lock, LogIn, Eye, EyeOff } from "lucide-react";
+import { User, Lock, LogIn, Eye, EyeOff, ShieldX } from "lucide-react";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -63,8 +63,14 @@ const LoginForm = () => {
       </div>
       <form className="space-y-6" onSubmit={onSubmit}>
         {error && (
-          <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded">
-            <p className="text-red-700 text-sm">{error}</p>
+          <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded relative">
+            <div className="flex">
+              <ShieldX className="h-5 w-5 text-red-400 mr-2 flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 className="text-sm font-medium text-red-800">Error</h3>
+                <p className="text-xs text-red-700 mt-1">{error}</p>
+              </div>
+            </div>
           </div>
         )}
         <div className="space-y-4">
