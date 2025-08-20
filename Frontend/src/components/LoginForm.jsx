@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import CircularProgress from "./CircularProgress";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
-    email: "",
+    username: "",
     password: "",
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const { email, password } = formData;
+  const { username, password } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,6 +19,7 @@ const LoginForm = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError("");
 
     try {
       const config = {
@@ -26,21 +28,30 @@ const LoginForm = () => {
         },
       };
 
-      const body = JSON.stringify({ email, password });
+      const body = JSON.stringify({ username, password });
       const res = await axios.post("/api/auth/login/", body, config);
 
       localStorage.setItem("access_token", res.data.token.access);
       localStorage.setItem("refresh_token", res.data.token.refresh);
       window.location.href = "/dashboard";
     } catch (err) {
-      setError(err.response?.data?.detail || "Login failed");
+      if (!err.response) {
+        setError("Unable to connect to the server. Please try again later.");
+      } else {
+        setError(err.response?.data?.detail || "Login failed");
+      }
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-md space-y-6">
+    <div className="relative max-w-md w-full bg-white p-8 rounded-lg shadow-md space-y-6">
+      {loading && (
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center rounded-lg z-50">
+          <CircularProgress />
+        </div>
+      )}
       <div>
         <h2 className="text-3xl font-bold text-center text-gray-900">
           Sign in to your account
@@ -55,20 +66,20 @@ const LoginForm = () => {
         <div className="space-y-4">
           <div>
             <label
-              htmlFor="email"
+              htmlFor="user"
               className="block text-sm font-medium text-gray-700"
             >
-              Email
+              username
             </label>
             <input
-              id="email"
-              name="email"
-              type="email"
+              id="username"
+              name="username"
+              type="text"
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400
                          focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              placeholder="Enter your email"
-              value={email}
+              placeholder="Enter your username"
+              value={username}
               onChange={onChange}
             />
           </div>
