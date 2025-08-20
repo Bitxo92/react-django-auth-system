@@ -33,7 +33,7 @@ const LoginForm = () => {
 
       localStorage.setItem("access_token", res.data.token.access);
       localStorage.setItem("refresh_token", res.data.token.refresh);
-      window.location.href = "/dashboard";
+      window.location.href = "/home";
     } catch (err) {
       if (!err.response) {
         setError("Unable to connect to the server. Please try again later.");

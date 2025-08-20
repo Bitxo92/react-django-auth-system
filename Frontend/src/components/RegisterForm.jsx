@@ -49,7 +49,7 @@ const RegisterForm = () => {
       const res = await axios.post("/api/auth/register/", body, config);
       localStorage.setItem("access_token", res.data.token.access);
       localStorage.setItem("refresh_token", res.data.token.refresh);
-      window.location.href = "/dashboard";
+      window.location.href = "/home";
     } catch (err) {
       const errors = err.response?.data;
       if (errors) {
