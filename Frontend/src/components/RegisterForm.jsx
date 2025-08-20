@@ -56,6 +56,8 @@ const RegisterForm = () => {
         Object.keys(errors).forEach((key) => {
           setError(errors[key][0]);
         });
+      } else if (!err.response) {
+        setError("Unable to connect to the server. Please try again later.");
       } else {
         setError("Registration failed");
       }
@@ -66,6 +68,11 @@ const RegisterForm = () => {
 
   return (
     <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-md space-y-6">
+      {loading && (
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center rounded-lg z-50">
+          <CircularProgress />
+        </div>
+      )}
       <div>
         <h2 className="text-3xl font-bold text-center text-gray-900">
           Create your account
