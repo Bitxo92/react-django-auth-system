@@ -1,9 +1,10 @@
 # react-django-auth-system
 
-[![License](https://img.shields.io/github/license/Bitxo92/react-django-auth-system)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Docs](https://img.shields.io/badge/docs-available-brightgreen)](#)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](#)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](#)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)](#)
 [![Stars](https://img.shields.io/github/stars/Bitxo92/react-django-auth-system?style=social)](https://github.com/Bitxo92/react-django-auth-system/stargazers)
 [![Forks](https://img.shields.io/github/forks/Bitxo92/react-django-auth-system?style=social)](https://github.com/Bitxo92/react-django-auth-system/network/members)
 
