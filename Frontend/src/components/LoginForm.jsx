@@ -64,7 +64,7 @@ const LoginForm = () => {
           Sign in to your account
         </h2>
       </div>
-      <form className="space-y-6" onSubmit={onSubmit}>
+      <form className="space-y-6" onSubmit={onSubmit} data-testid="login-form">
         {error && (
           <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded relative">
             <div className="flex">
@@ -79,7 +79,7 @@ const LoginForm = () => {
         <div className="space-y-4">
           <div>
             <label
-              htmlFor="user"
+              htmlFor="username"
               className="block text-sm font-medium text-gray-700"
             >
               <div className="flex items-center ml-2">
