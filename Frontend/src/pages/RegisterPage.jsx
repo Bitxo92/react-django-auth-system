@@ -3,7 +3,10 @@ import RegisterForm from "../components/RegisterForm";
 
 const RegisterPage = () => {
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row">
+    <div
+      className="min-h-screen flex flex-col lg:flex-row"
+      style={{ backgroundImage: "url('./background.jpg')" }}
+    >
       {/* Left Section - Animation and Text */}
       <div className="lg:w-1/2 bg-white flex flex-col items-center justify-center p-8 order-2 lg:order-1 space-y-8">
         <div className="w-full max-w-md">

@@ -3,7 +3,10 @@ import LoginForm from "../components/LoginForm";
 
 const LoginPage = () => {
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row">
+    <div
+      className="min-h-screen flex flex-col lg:flex-row "
+      style={{ backgroundImage: "url('./background.jpg')" }}
+    >
       {/* Left Section - Animation and Text */}
       <div className="lg:w-1/2 bg-white flex flex-col items-center justify-center p-8 order-2 lg:order-1 space-y-8">
         <div className="w-full max-w-md">
@@ -24,7 +27,7 @@ const LoginPage = () => {
       </div>
 
       {/* Right Section - Form */}
-      <div className="lg:w-1/2 flex items-center justify-center p-8 order-1 lg:order-2">
+      <div className="lg:w-1/2 flex items-center justify-center p-8 order-1 lg:order-2 ">
         <LoginForm />
       </div>
     </div>
