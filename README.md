@@ -31,21 +31,11 @@ This project serves as a starting point for developers looking to bootstrap Djan
 ## Tech Stack
 
 ### Frontend
-- ![React](https://img.shields.io/badge/React-19-blue?logo=react&logoColor=white) 
-- ![Vite](https://img.shields.io/badge/Vite-3C8772?logo=vite&logoColor=white) 
-- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwind-css&logoColor=white) 
-- ![Lucide React](https://img.shields.io/badge/Lucide-000000?logo=lucide&logoColor=white) 
-- ![Axios](https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=white) 
-- ![React Router](https://img.shields.io/badge/React_Router-CA4245?logo=react-router&logoColor=white) 
-- ![LottieFiles](https://img.shields.io/badge/LottieFiles-FF4081?logo=lottiefiles&logoColor=white) 
-- ![Vitest](https://img.shields.io/badge/Vitest-222222?logo=vitest&logoColor=white) 
+[![My Skills](https://skillicons.dev/icons?i=react,vite,vitest,tailwindcss&perline=4)](https://skillicons.dev)
+
 
 ### Backend
-- ![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white) 
-- ![DRF](https://img.shields.io/badge/Django_REST_Framework-092E20?logo=django&logoColor=white) 
-- ![SimpleJWT](https://img.shields.io/badge/SimpleJWT-000000?logo=jsonwebtokens&logoColor=white) 
-- ![SQLite](https://img.shields.io/badge/SQLite-07405E?logo=sqlite&logoColor=white) 
-- ![CORS](https://img.shields.io/badge/CORS-000000?logo=cors&logoColor=white) 
+[![My Skills](https://skillicons.dev/icons?i=django,sqlite,python&perline=3)](https://skillicons.dev)
 
 
 ## Getting Started
