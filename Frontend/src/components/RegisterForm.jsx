@@ -90,7 +90,10 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="relative max-w-md w-full bg-white p-8 rounded-lg shadow-md space-y-6">
+    <div
+      className="relative max-w-md w-full bg-white-500 rounded-md  backdrop-filter backdrop-blur-md bg-opacity-40 border p-6 border-gray-200
+ shadow-md space-y-6"
+    >
       {loading && (
         <div className="absolute inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center rounded-lg z-50">
           <CircularProgress />
