@@ -151,7 +151,7 @@ Project/
 
 # License
 
-This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.  
+This project is licensed under the **MIT License**.  
 See the [LICENSE](LICENSE) file for the full details.  
 
 
@@ -209,8 +209,7 @@ We welcome contributions from the community! Your help improves this template an
 - PRs should clearly describe the **changes and motivation**.  
 - Include **screenshots** for UI changes when possible.  
 - Link any **related issues**.
-> [!Important]
-> By contributing, you agree that your contributions will be licensed under **GPL-3.0**, ensuring this project remains free and open source.
+
 
 
 <h2 align="center">⭐ Please Support this project by giving it a star ⭐</h2>
