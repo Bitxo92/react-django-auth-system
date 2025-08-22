@@ -1,4 +1,16 @@
-# react-django-auth-system
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg" alt="Django Logo" width="80"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React Logo" width="80"/>
+  <br/>
+  🔐 React + Django Auth System 🚀
+</h1>
+
+<p align="center">
+  A full-stack authentication system built with <strong>Django (backend)</strong> & <strong>React (frontend)</strong>.  
+  Features modern auth flows: 🔑 JWT, 🔄 refresh tokens, and 🛡️ role-based access control.  
+</p>
+
+---
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Docs](https://img.shields.io/badge/docs-available-brightgreen)](#)
